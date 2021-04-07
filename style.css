@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation-direction: reverse;
+    animation : container 4.5s ease-in-out infinite;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .container{
+    width: 50px;
+    height: 50px;
+    background: #808080;
+    margin: 15em;
+    position: relative;
+    border: 1px solid black;
+    transition-timing-function: step-end;
+    animation : container 8s linear infinite;
+}
+
+
+.box:nth-child(1){
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    top: -50px;
+    left: -1px;
+    transform-origin: bottom right;
+    transition-timing-function: step-end;
+    animation : animate 2s ease-in-out infinite;
+}
+.box:nth-child(2){
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    top: -1px;
+    left: 50px;
+    transform-origin: left bottom;
+    transition-timing-function: step-end;
+    animation : animate1 2s ease-in-out infinite;
+}
+.box:nth-child(3){
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    bottom: -50px;
+    right: -1px;
+    transform-origin: top left;
+    transition-timing-function: step-end;
+    animation : animate2 2s ease-in-out infinite;
+}
+.box:nth-child(4){
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    bottom: -1px;
+    right: 50px;
+    transform-origin: top right;
+    transition-timing-function: step-end;
+    animation : animate3 2s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotateZ(0deg);
+        background: #FE53BB;
+    }
+    100%{
+        transform: rotateZ(180deg);
+        background: #08F7FE;
+        
+    }
+}
+
+@keyframes animate1 {
+    0%{
+        transform: rotateZ(0deg);
+        background: #08F7FE;
+    }
+    100%{
+        transform: rotateZ(180deg);
+        background: #f5d300;
+        
+    }
+}
+
+@keyframes animate2 {
+    from{
+        transform: rotateZ(0deg);
+        background:  #f5d300 ;
+    }
+    to{
+        transform: rotateZ(180deg);
+        background: #09FBD3;
+        
+    }
+}
+
+@keyframes animate3 {
+    0%{
+        transform: rotateZ(0deg);
+        background:   #09FBD3;
+    }
+    100%{
+        transform: rotateZ(180deg);
+        background: #FE53BB;
+        
+    }
+}
+
+@keyframes container {
+    0%{
+        background:  #FE53BB;
+    }
+    25%{
+        background:  #08F7FE;
+    }
+    50%{
+        background:  #f5d300 ;
+    }
+    100%{
+        background:  #09FBD3;
+    }
+}
